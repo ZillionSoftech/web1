@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="statesname" onchange="setCity();">        
+        <option value=""> Select</option>
+    </select>
+    <div id="city"></div>
+
+    <script>
+    const statename=["Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttarakhand","Uttar Pradesh","West Bengal"];
+
+    let totalnumberofstate=statename.length;
+    document.write(totalnumberofstate)
+
+    let optionString="<option value='Select'>Select</option>";
+    for(let i=0;i<totalnumberofstate;i++){
+            optionString=optionString+"<option value='"+statename[i]+"'>"+statename[i]+"</option>";            
+    }
+    document.getElementById("statesname").innerHTML=optionString;
+
+    function setCity(){        
+        const HaryanacityName=["Rewari","Yamunanagar","Gurgaon","Hissar","Ambala","Panchkula","Karnal","Kaithal","Kurukshetra","Bhiwani","Fathehbad","Sirsa","Rohtak","Jind","Faridabad","Palwal","Nuh","Charkhi Dadri","Panipat","Sonipat","Mahendergarh","Jajhar"];
+        let cityString="<select name='' ><option value=''>Select Your State</option>";
+        for(let i=0;i<HaryanacityName.length;i++){
+            cityString=cityString+"<option value='"+HaryanacityName[i]+"'>"+HaryanacityName[i]+"</option>";
+        }
+        cityString=cityString+"</select>";
+
+
+        document.getElementById('city').innerHTML=cityString;
+
+
+    }
+    </script>
+</body>
+</html>
